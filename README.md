@@ -186,3 +186,19 @@ python -m pytest
 로그인 잠금까지 보려면 `api-sec-check https://xn--9h0bj97ao2i.com --login-test`임. `https://xn--9h0bj97ao2i.com`은 최규선.com의 호스트임.
 
 이 저장소의 CI는 Python 3.11과 3.12에서 `pytest`를 실행함. `actions/checkout`과 `actions/setup-python`은 커밋 SHA로 고정함.
+
+## 기본 검사 실행
+
+아래는 `api-sec-check https://xn--9h0bj97ao2i.com` 만 실행한 화면임. `--login-test` 는 쓰지 않음. 글꼴은 Noto Sans Mono CJK KR임. 주의 2건은 `style-src`의 `'unsafe-inline'`과 Fly 가장자리 `Server`이고, 검토에 남은 잔여임. 미충족은 없음. 로그인 429 확인은 건너뜀.
+
+![명령과 보안 헤더](docs/images/api-sec-check-01.png)
+
+![헤더 나머지와 관리 응답](docs/images/api-sec-check-02.png)
+
+![쿠키, 버전, CSRF와 JSON 앞부분](docs/images/api-sec-check-03.png)
+
+![JSON 보안 헤더 항목](docs/images/api-sec-check-04.png)
+
+![JSON 쿠키·버전·CSRF](docs/images/api-sec-check-05.png)
+
+![로그인 검사는 건너뛰고 요약 후 프롬프트로 돌아옴](docs/images/api-sec-check-06.png)
