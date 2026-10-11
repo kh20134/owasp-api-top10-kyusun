@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 980" width="1200" height="980">
+  <rect width="1200" height="980" fill="#f6f3ee"/>
+  <text x="56" y="52" fill="#1c1917" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="28" font-weight="700">최규선.com 요청 경로와 신뢰 경계</text>
+  <text x="56" y="82" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="15">Flask · Fly.io · SQLite /data/blog.db · OWASP API Security Top 10 (2023) 조치 후</text>
+
+  <rect x="48" y="108" width="1104" height="132" rx="16" fill="#fffdfb" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="72" y="134" fill="#c2410c" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="13" font-weight="700">신뢰 경계 1 · 비신뢰</text>
+  <rect x="390" y="150" width="420" height="68" rx="10" fill="#fff7ed" stroke="#c2410c" stroke-width="1.25"/>
+  <text x="600" y="176" text-anchor="middle" fill="#1c1917" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="18" font-weight="700">브라우저 클라이언트</text>
+  <text x="600" y="200" text-anchor="middle" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="14">공개 GET · 관리 화면</text>
+
+  <line x1="600" y1="240" x2="600" y2="276" stroke="#44403c" stroke-width="1.5"/>
+  <polygon points="600,284 594,272 606,272" fill="#44403c"/>
+  <text x="616" y="268" fill="#44403c" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="13">HTTPS</text>
+
+  <rect x="48" y="292" width="1104" height="156" rx="16" fill="#f8fbff" stroke="#1d4ed8" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="72" y="318" fill="#1d4ed8" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="13" font-weight="700">신뢰 경계 2 · Fly 가장자리</text>
+  <rect x="280" y="334" width="640" height="90" rx="10" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.25"/>
+  <text x="600" y="362" text-anchor="middle" fill="#1c1917" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="18" font-weight="700">Fly edge</text>
+  <text x="600" y="386" text-anchor="middle" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="14">TLS 종료 · Server: Fly/&lt;빌드&gt; 는 애플리케이션 버전이 아님</text>
+  <text x="600" y="408" text-anchor="middle" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="14">FLY_APP_NAME 이 있을 때만 프록시 한 홉을 신뢰</text>
+
+  <line x1="600" y1="448" x2="600" y2="484" stroke="#44403c" stroke-width="1.5"/>
+  <polygon points="600,492 594,480 606,480" fill="#44403c"/>
+  <text x="616" y="476" fill="#44403c" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="13">ProxyFix 한 홉</text>
+
+  <rect x="48" y="500" width="1104" height="424" rx="16" fill="#f4fbfa" stroke="#0f766e" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="72" y="526" fill="#0f766e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="13" font-weight="700">신뢰 경계 3 · Flask 프로세스</text>
+  <rect x="96" y="544" width="1008" height="150" rx="12" fill="#ffffff" stroke="#0f766e" stroke-width="1.25"/>
+  <text x="600" y="572" text-anchor="middle" fill="#1c1917" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="18" font-weight="700">Flask 보안 미들웨어</text>
+  <text x="600" y="594" text-anchor="middle" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="13">세션 쿠키 blog_session · HttpOnly · SameSite=Lax · Fly 또는 HTTPS 이면 Secure</text>
+
+  <rect x="120" y="614" width="176" height="56" rx="8" fill="#ccfbf1" stroke="#0f766e"/>
+  <text x="208" y="647" text-anchor="middle" fill="#134e4a" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="15" font-weight="700">헤더·CSP</text>
+  <rect x="312" y="614" width="176" height="56" rx="8" fill="#ccfbf1" stroke="#0f766e"/>
+  <text x="400" y="647" text-anchor="middle" fill="#134e4a" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="15" font-weight="700">CSRF</text>
+  <rect x="504" y="614" width="176" height="56" rx="8" fill="#ccfbf1" stroke="#0f766e"/>
+  <text x="592" y="647" text-anchor="middle" fill="#134e4a" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="15" font-weight="700">속도 제한</text>
+  <rect x="696" y="614" width="176" height="56" rx="8" fill="#ccfbf1" stroke="#0f766e"/>
+  <text x="784" y="647" text-anchor="middle" fill="#134e4a" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="15" font-weight="700">인가</text>
+  <rect x="888" y="614" width="192" height="56" rx="8" fill="#ccfbf1" stroke="#0f766e"/>
+  <text x="984" y="647" text-anchor="middle" fill="#134e4a" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="15" font-weight="700">입력 허용 목록</text>
+
+  <line x1="360" y1="710" x2="360" y2="742" stroke="#44403c" stroke-width="1.5"/>
+  <polygon points="360,750 354,738 366,738" fill="#44403c"/>
+  <line x1="840" y1="710" x2="840" y2="742" stroke="#44403c" stroke-width="1.5"/>
+  <polygon points="840,750 834,738 846,738" fill="#44403c"/>
+
+  <rect x="120" y="756" width="480" height="132" rx="10" fill="#ffffff" stroke="#0f766e" stroke-width="1.25"/>
+  <text x="360" y="788" text-anchor="middle" fill="#1c1917" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="17" font-weight="700">SQLite 볼륨</text>
+  <text x="360" y="814" text-anchor="middle" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="14">/data/blog.db</text>
+  <text x="360" y="838" text-anchor="middle" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="14">게시 데이터 · 기존 행은 다시 쓰지 않음</text>
+  <text x="360" y="862" text-anchor="middle" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="13">스키마 마이그레이션은 바꾸지 않음</text>
+
+  <rect x="640" y="756" width="440" height="132" rx="10" fill="#ffffff" stroke="#0f766e" stroke-width="1.25"/>
+  <text x="860" y="788" text-anchor="middle" fill="#1c1917" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="17" font-weight="700">정적 vendor 자산</text>
+  <text x="860" y="814" text-anchor="middle" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="14">/static/vendor/ · 같은 출처</text>
+  <text x="860" y="838" text-anchor="middle" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="14">Three 0.170.0 · Quill 2.0.3</text>
+  <text x="860" y="862" text-anchor="middle" fill="#57534e" font-family="Noto Sans CJK KR, Noto Sans CJK JP, sans-serif" font-size="14">Sortable 1.15.6 · script-src 는 'self'</text>
+</svg>

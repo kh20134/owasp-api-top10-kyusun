@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-sec-check"
+version = "1.0.0"
+description = "최규선.com 조치 후 보안 헤더·쿠키·CSRF 거부를 읽는 점검 도구"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "kh20134" }]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["flask==3.1.1", "pytest==8.4.2"]
+
+[project.scripts]
+api-sec-check = "api_sec_check.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["api_sec_check*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
